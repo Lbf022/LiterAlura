@@ -87,3 +87,6 @@ Além disso, configure as seguintes **variáveis de ambiente** para conexão ao 
     * Escolha as opções do menu para consultar e gerenciar o catálogo de livros.
 
 ---
+
+
+<img width="410" height="410" alt="Badge-Literalura" src="https://github.com/user-attachments/assets/f723f4c4-14b4-4d81-8c28-2d26d5d3851b" />

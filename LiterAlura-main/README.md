@@ -1,29 +1,91 @@
-# LiterAlura
-Challenge Literalura
+# 📚 LiterAlura
 
-## Descripcion
-En este proyecto se busca utilizar la API de Gutendex disponible en https://gutendex.com/ con el objetivo de ofrecer un catalo de livros que el usuario pueda consultar. El programa cuenta con 5 opciones menu que son:
+Catálogo de Livros usando a API Gutendex
 
-1.- Buscar libro por título. Busca y guarda un libro en la base de dados en caso de que aun no se haya guardado.
+## 📖 Sobre o Projeto
 
-2.- Listar Libros registrados. Lista los livros registrados en la base de dados.
+O **LiterAlura** é uma aplicação Java desenvolvida com **Spring Boot** que consome a [API Gutendex](https://gutendex.com/) para oferecer um catálogo de livros pesquisáveis.
+Os dados são armazenados em um banco de dados **PostgreSQL** para consultas futuras.
 
-3.- Listar autores registrados. Lista los autores registrados en la base de dados.
+O sistema oferece **5 funcionalidades principais**:
 
-4.- Listar autores vivos a partir de un determinado año. Pregunta a partir de que año se buscan autores que estuvieran vivos y los lista.
+1. **Buscar livro por título**
 
-5.- Listar livros por idioma. Pregunta en que idioma se buscan livros de la base de dados y los lista. 
+    * Consulta a API Gutendex e salva o livro no banco de dados caso ainda não esteja registrado.
 
-Cada una de estas opciones despliega sus resultados en la consola del IDE que estemos usando, en este caso IntelliJ. Este proyecto fue construido usando el framework de Spring Boot y las librerias Spring Data JPA, PostgreSQL Driver y Jackson Databind.
+2. **Listar livros registrados**
 
+    * Exibe todos os livros armazenados no banco de dados.
 
-## Requisitos 
-* Java (versión 17 en adelante)
-* Maven 
-* Spring Boot (versión 3.3.1)
-* PostgreSQL
-* IDE Java (Eclipse, IntelliJ IDEA, etc.)
+3. **Listar autores registrados**
 
-Es importante mencionar que cierta informacion como la contraseña de la base de dados se maneja como variable de entorno por lo que hay que tenerlo en consideración al momento de ser ejecutado el programa, ya que si no estan definidas dichas variables, no se podra enlazar la base de dados. 
+    * Mostra todos os autores já cadastrados.
+
+4. **Listar autores vivos a partir de um determinado ano**
+
+    * Solicita um ano de referência e retorna autores que estavam vivos a partir dessa data.
+
+5. **Listar livros por idioma**
+
+    * Filtra e exibe os livros registrados conforme o idioma informado.
+
+💡 Todas as interações acontecem pelo **console** do IDE (ex.: IntelliJ IDEA).
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+* **Java 17+**
+* **Maven**
+* **Spring Boot 3.3.1**
+* **Spring Data JPA**
+* **PostgreSQL Driver**
+* **Jackson Databind**
+
+---
+
+## 📋 Pré-requisitos
+
+Antes de executar o projeto, você precisará ter instalado:
+
+* [Java 17 ou superior](https://adoptium.net/)
+* [Maven](https://maven.apache.org/)
+* [PostgreSQL](https://www.postgresql.org/)
+* IDE Java (Eclipse, IntelliJ IDEA, VS Code com extensão Java, etc.)
+
+Além disso, configure as seguintes **variáveis de ambiente** para conexão ao banco de dados:
+
+| Variável      | Descrição                              |
+| ------------- | -------------------------------------- |
+| `DB_HOST`     | Host do banco de dados                 |
+| `DB_PORT`     | Porta do banco de dados (padrão: 5432) |
+| `DB_NAME`     | Nome do banco de dados                 |
+| `DB_USER`     | Usuário do banco de dados              |
+| `DB_PASSWORD` | Senha do banco de dados                |
+
+⚠ **Importante:** Sem essas variáveis, a aplicação não conseguirá se conectar ao banco de dados.
+
+---
+
+## ▶️ Como Executar
+
+1. **Clonar o repositório**
+
+   ```bash
+   git clone https://github.com/usuario/literalura.git
+   cd literalura
+   ```
+
+2. **Compilar e executar**
+
+   ```bash
+   mvn spring-boot:run
+   ```
+
+3. **Interagir pelo console**
+
+    * Escolha as opções do menu para consultar e gerenciar o catálogo de livros.
+
+---
 
 
